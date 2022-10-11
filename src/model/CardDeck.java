@@ -1,20 +1,17 @@
 package model;
 
 
-import java.util.ArrayList;
-
-
 public class CardDeck {
 	/**
 	 * deck holds the cards in the current deck
 	 */
-	private ArrayList <Card> deck;
+	private DoublyLinkedList <Card> deck;
 	
 	/**
 	 * This constructor initializes the ArrayList and calls the methods in the class
 	 */
 	public CardDeck() {
-		deck = new ArrayList<Card>();
+		deck = new DoublyLinkedList<Card>();
 		createDeck();
 	}
 
@@ -39,7 +36,7 @@ public class CardDeck {
 	 * The deck getter method
 	 * @return the deck
 	 */
-	public ArrayList<Card> getDeck() {
+	public DoublyLinkedList<Card> getDeck() {
 		return deck;
 	}
 }

@@ -2,13 +2,13 @@ package model;
 
 public class DNode <T> {
 	private T data;
-    private DNode<?> next = null;
-    private DNode<?> previous = null;   // previous link in list
+    private DNode<T> next = null;
+    private DNode<T> prev = null;   // previous link in list
     
     public DNode(T data) {
-        this.setData(data);
-        this.setNext(null);
-        this.setPrevious(null);
+        this.data = data;
+        this.prev = null;
+        this.next = null;
     }
 
 	/**
@@ -28,29 +28,29 @@ public class DNode <T> {
 	/**
 	 * @return the next
 	 */
-	public DNode<?> getNext() {
+	public DNode<T> getNext() {
 		return next;
 	}
 
 	/**
 	 * @param next the next to set
 	 */
-	public void setNext(DNode<?> next) {
+	public void setNext(DNode<T> next) {
 		this.next = next;
 	}
 
 	/**
 	 * @return the previous
 	 */
-	public DNode<?> getPrevious() {
-		return previous;
+	public DNode<T> getPrev() {
+		return prev;
 	}
 
 	/**
 	 * @param previous the previous to set
 	 */
-	public void setPrevious(DNode<?> previous) {
-		this.previous = previous;
+	public void setPrev(DNode<T> previous) {
+		this.prev = previous;
 	} 
     
 }

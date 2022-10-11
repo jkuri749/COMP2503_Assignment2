@@ -1,14 +1,15 @@
 package controller;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 import model.Card;
 import model.CardDeck;
+import model.DoublyLinkedList;
 
 public class Shuffle {
 	
-	private ArrayList <Card> deck;
+	private DoublyLinkedList<Card> deck;
 	CardDeck cd;
 	
 	/**
@@ -26,15 +27,14 @@ public class Shuffle {
 	private void shuffleDeck() {
 		
 		deck = cd.getDeck();
-		getNewDeck();
-		Collections.shuffle(deck); 
+		Collections.shuffle((List<?>) deck); 
 	}
 	
 	/**
 	 * Card deck getter method
 	 * @return new deck
 	 */
-	public ArrayList<Card> getNewDeck() {
+	public DoublyLinkedList<Card> getDeck() {
 		return deck;
 	}
 }
