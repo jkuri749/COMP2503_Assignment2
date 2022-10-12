@@ -25,9 +25,11 @@ public class CardDeck {
 		/*
 		 * makes a deck of cards based on the suit and the rank
 		 */
-		for (int i = 0 ; i < suits.length; i++) {
-			for (int j = 1 ; j <=13 ; j++) {
-				deck.add(new Card (j,suits[i]));
+		for (int i = 0; i < suits.length; i++) {
+			
+			for (int j = 1; j <=13; j++) {
+				
+				deck.add(new Card (j, suits[i]));
 			}
 		}
 	}

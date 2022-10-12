@@ -17,6 +17,7 @@ public class Shuffle {
 	 */
 	public Shuffle() {
 		cd = new CardDeck();
+		deck = cd.getDeck();
 		shuffleDeck();
 		
 	}
@@ -25,8 +26,6 @@ public class Shuffle {
 	 * method that shuffles the ArrayList deck of cards
 	 */
 	private void shuffleDeck() {
-		
-		deck = cd.getDeck();
 		Collections.shuffle((List<?>) deck); 
 	}
 	
