@@ -31,8 +31,11 @@ public class GameMenu {
 	}
 	
 	public int deal() {
-		System.out.print("\nHow many cards to deal: ");
+		System.out.print("\n******* Welcome to War Game *******"
+				+ "\\n How many cards to deal:  ");
+		System.out.println();
 		int deal = input.nextInt();
+		System.out.println("Let the games begin!! \n");
 		return deal;
 	}
 }

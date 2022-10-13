@@ -17,6 +17,10 @@ public class DoublyLinkedList <T> {
         return start ==null;
     }
 	
+	/**
+	 * Adds an item to the head
+	 * @param item
+	 */
 	public void add(T item) {  
         //Create a new node  
         DNode<T> newNode = new DNode<T>(item);  
@@ -39,7 +43,39 @@ public class DoublyLinkedList <T> {
             //end's next point to null  
             end.setNext(null);  
         }  
-    }  
+    }
+	
+	/**
+	 * removes an item from the top
+	 * @param item
+	 * @return
+	 */
+	public T remove(T item) {  
+        //Create a new node  
+        DNode<T> newNode; 
+        T data = null;
+   
+        if(start != null) {
+            if(start.getNext() == null) {
+                data = start.getData();
+                start = null;
+            }
+            else {
+            	//pointer points to start
+                newNode = start;
+                
+                //gets data in the node
+                data = start.getData();
+                
+                //makes next the start
+                start = start.getNext();
+                
+                //removes the start
+                newNode.setNext(null);
+            }
+        }
+        return data;
+    }
 	
 	public int length() {
 		int length = this.size;

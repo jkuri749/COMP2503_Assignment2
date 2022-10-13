@@ -2,7 +2,9 @@ package controller;
 
 import model.Card;
 import model.DoublyLinkedList;
+import model.LinkedListStack;
 import view.GameMenu;
+import java.util.Scanner;
 
 
 /**
@@ -15,10 +17,13 @@ public class WarGame {
 	
 	DoublyLinkedList<Card> cards;
 	GameMenu gameMen;
-	
+	Scanner input;
+	LinkedListStack<Card> stack;
 	
 	// Constructor that handles, instantiates, and calls all the methods and classes
 	public WarGame() {
+		gameMen = new GameMenu();
+		stack = new LinkedListStack<>();
 		launchApplication();
 	}
 

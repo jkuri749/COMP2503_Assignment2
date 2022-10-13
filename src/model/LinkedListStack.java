@@ -4,6 +4,7 @@ import java.util.EmptyStackException;
 
 public class LinkedListStack<T> implements StackInterface <T>{
 	
+	@SuppressWarnings("hiding")
 	private class StackNode<T> {
 		private T value;
 		private StackNode<T> next;
