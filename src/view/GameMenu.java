@@ -29,10 +29,14 @@ public class GameMenu {
 		input.nextLine();
 		return option;
 	}
-	
+	/**
+	 * prompts user for amount of cards to deal
+	 * @return deal
+	 */
 	public int deal() {
-		System.out.print("\n******* Welcome to War Game *******"
-				+ "\\n How many cards to deal:  ");
+		System.out.println("\n******* Welcome to War Game *******");
+		System.out.println();
+		System.out.print("How many cards to deal: ");
 		System.out.println();
 		int deal = input.nextInt();
 		System.out.println("Let the games begin!! \n");

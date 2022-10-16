@@ -13,6 +13,12 @@ public class DoublyLinkedList <T> {
         size = 0;
     }
 	
+	public DNode<T> getStart() {
+		return start;
+	}
+	public DNode<T> getEnd() {
+		return end;
+	}
 	public boolean isEmpty(){
         return start ==null;
     }
@@ -50,7 +56,7 @@ public class DoublyLinkedList <T> {
 	 * @param item
 	 * @return
 	 */
-	public T remove(T item) {  
+	public T remove() {  
         //Create a new node  
         DNode<T> newNode; 
         T data = null;
@@ -81,4 +87,25 @@ public class DoublyLinkedList <T> {
 		int length = this.size;
 		return length;
 	}
+	
+	/**
+	 * prints Nodes
+	 */
+    public void print() {  
+    	
+        //Node current will point to head  
+        DNode<T> last = null; 
+        if(start == null) {  
+            System.out.println("Doubly linked list is empty");  
+            return;  
+        }  
+        System.out.println("Cards of doubly linked list: "); 
+        
+        while(start != null) {  
+            //Print each node and then go to next.  
+            System.out.println(start.getData() + " ");  
+            last = start;
+            start = start.getNext();
+        }  
+    }  
 }

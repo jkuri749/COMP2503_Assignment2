@@ -8,7 +8,10 @@ public class LinkedListStack<T> implements StackInterface <T>{
 	private class StackNode<T> {
 		private T value;
 		private StackNode<T> next;
-		private StackNode(T x, StackNode <T> n) {value = x; next = n;}
+		private StackNode(T x, StackNode <T> n) {
+			value = x; next = n;
+		}
+		
 	}
 	
 	private StackNode<T> top;

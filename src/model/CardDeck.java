@@ -1,5 +1,9 @@
 package model;
 
+import java.util.ArrayList;
+
+import controller.Shuffle;
+
 
 public class CardDeck {
 	/**
@@ -34,6 +38,24 @@ public class CardDeck {
 		}
 	}
 
+	public void shuffle() {
+		
+		Shuffle shuffler = new Shuffle();
+		ArrayList<Card> tempList = shuffler.shuffleDeck();
+//		deck = new DoublyLinkedList<Card>();
+		
+		int count = 0;
+		
+		while (tempList.size() > count) {
+			deck.add(tempList.get(count));
+			count++;
+		}
+	}
+	
+	public void printDeck() {
+		deck.print();
+	}
+	
 	/**
 	 * The deck getter method
 	 * @return the deck
