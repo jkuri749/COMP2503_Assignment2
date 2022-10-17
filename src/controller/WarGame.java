@@ -24,7 +24,9 @@ public class WarGame {
 	Shuffle shuffle;
 	CardDeck cd;
 	
-	// Constructor that handles, instantiates, and calls all the methods and classes
+	/**
+	 * Constructor that handles, instantiates, and calls all the methods and classes
+	 */
 	public WarGame() {
 		cd = new CardDeck();
 		cards = new DoublyLinkedList<Card>();
@@ -32,7 +34,9 @@ public class WarGame {
 		stack = new LinkedListStack<Card>();
 		launchApplication();
 	}
-
+	/**
+	 * launches the program and controls for the different options
+	 */
 	private void launchApplication() {
 		boolean flag = true;
 		int option;
@@ -58,7 +62,6 @@ public class WarGame {
 					cards = cd.getDeck();
 					for (int i = 0; i < 52; i++) {
 						stack.push(cards.remove());
-//						System.out.print(stack.pop() + ", ");
 					}
 					
 					System.out.println("\n Shuffled!");
@@ -75,7 +78,10 @@ public class WarGame {
 			}
 		}
 	}
-
+	/**
+	 * plays the game 
+	 * deals the user amount of cards to two players and calculates the wins
+	 */
 	private void playGame() {
 				
 		LinkedListStack<Card> player1 = new LinkedListStack<>();
@@ -90,12 +96,9 @@ public class WarGame {
 		if (deal > 26 || deal < 1) {
 			System.out.println("Invalid! try a number between 1-26");
 		}
-//		for (int i = 0; i < 52; i++) {
-//			stack.push(cards.remove());
-//		}
+
 		for (int i = 0; i < deal; i++) {
 			
-//			DNode<Card> card = cards.getStart();
 			player1.push(stack.pop());
 			
 			player2.push(stack.pop());

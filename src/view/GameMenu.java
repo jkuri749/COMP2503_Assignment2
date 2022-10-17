@@ -3,13 +3,18 @@ package view;
 import java.util.Scanner;
 
 /**
- * This class will be used to show the menus and sub menus to the user
- * It also prompts the user for the inputs and validates them 
+ * shows menus for the user, returns and validates inputs
+ * 
+ * @author joshuakuriakose
+ *
  */
 public class GameMenu {
 	Scanner input; 
 	
 
+	/**
+	 * constructor initializes the Scanner
+	 */
 	public GameMenu() {
 		input = new Scanner(System.in);
 	}

@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * class for card object
+ * @author joshuakuriakose
+ *
+ */
 public class Card {
 
 		/**
