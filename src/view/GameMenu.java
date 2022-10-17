@@ -29,17 +29,10 @@ public class GameMenu {
 		input.nextLine();
 		return option;
 	}
-	/**
-	 * prompts user for amount of cards to deal
-	 * @return deal
-	 */
+	
 	public int deal() {
-		System.out.println("\n******* Welcome to War Game *******");
-		System.out.println();
-		System.out.print("How many cards to deal: ");
-		System.out.println();
+		System.out.print("\nHow many cards to deal: ");
 		int deal = input.nextInt();
-		System.out.println("Let the games begin!! \n");
 		return deal;
 	}
 }
