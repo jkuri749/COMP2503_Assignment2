@@ -2,6 +2,12 @@ package model;
 
 import java.util.EmptyStackException;
 
+/**
+ * Linked stack class for shuffled cards
+ * @author gurmangrewal
+ *
+ * @param <T>
+ */
 public class LinkedListStack<T> implements StackInterface <T>{
 	
 	@SuppressWarnings("hiding")

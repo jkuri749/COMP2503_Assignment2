@@ -1,6 +1,11 @@
 package model;
 
-
+/**
+ * Doubly Linked List class to hold cards
+ * @author joshuakuriakose
+ *
+ * @param <T>
+ */
 public class DoublyLinkedList <T> {
 	
 	private DNode<T> start; // reference to the first node of the list
@@ -13,12 +18,26 @@ public class DoublyLinkedList <T> {
         size = 0;
     }
 	
+	/**
+	 * getter for start
+	 * @return start
+	 */
 	public DNode<T> getStart() {
 		return start;
 	}
+	
+	/**
+	 * getter for end
+	 * @return end
+	 */
 	public DNode<T> getEnd() {
 		return end;
 	}
+	
+	/**
+	 * boolean method checks if DLL is empty
+	 * @return true
+	 */
 	public boolean isEmpty(){
         return start ==null;
     }
@@ -82,7 +101,10 @@ public class DoublyLinkedList <T> {
         }
         return data;
     }
-	
+	/**
+	 * gets the length of DLL
+	 * @return length
+	 */
 	public int length() {
 		int length = this.size;
 		return length;

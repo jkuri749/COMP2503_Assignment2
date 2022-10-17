@@ -1,5 +1,8 @@
 package model;
 
+/*
+ * Node for Doubly Linked List
+ */
 public class DNode <T> {
 	private T data;
     private DNode<T> next = null;

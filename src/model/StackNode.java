@@ -1,5 +1,11 @@
 package model;
 
+/**
+ * Node of LLS
+ * @author gurmangrewal
+ *
+ * @param <T>
+ */
 public class StackNode<T> {
 	
 	private T data;

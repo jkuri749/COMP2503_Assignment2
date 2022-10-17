@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 import controller.Shuffle;
 
-
+/**
+ * This class represents a card deck
+ * @author joshuakuriakose
+ */
 public class CardDeck {
 	/**
 	 * deck holds the cards in the current deck
@@ -12,7 +15,8 @@ public class CardDeck {
 	private DoublyLinkedList <Card> deck;
 	
 	/**
-	 * This constructor initializes the ArrayList and calls the methods in the class
+	 * This constructor initializes the DoublyLinkedList
+	 * calls the create deck function
 	 */
 	public CardDeck() {
 		deck = new DoublyLinkedList<Card>();
@@ -27,7 +31,7 @@ public class CardDeck {
 		String[] suits = {"Spades", "Diamond", "Clubs", "Hearts"};
 		
 		/*
-		 * makes a deck of cards based on the suit and the rank
+		 * makes a deck of cards based on the suit and rank
 		 */
 		for (int i = 0; i < suits.length; i++) {
 			
@@ -37,12 +41,14 @@ public class CardDeck {
 			}
 		}
 	}
-
+	
+	/**
+	 * this method shuffle the deck after creating a new deck
+	 */
 	public void shuffle() {
 		
 		Shuffle shuffler = new Shuffle();
 		ArrayList<Card> tempList = shuffler.shuffleDeck();
-//		deck = new DoublyLinkedList<Card>();
 		
 		int count = 0;
 		
@@ -52,6 +58,9 @@ public class CardDeck {
 		}
 	}
 	
+	/**
+	 * this method prints the deck
+	 */
 	public void printDeck() {
 		deck.print();
 	}

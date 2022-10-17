@@ -9,6 +9,11 @@ import model.CardDeck;
 import model.DNode;
 import model.DoublyLinkedList;
 
+/**
+ * class that shuffles card deck
+ * @author joshuakuriakose
+ *
+ */
 public class Shuffle {
 	
 	private DoublyLinkedList<Card> deck;
